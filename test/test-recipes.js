@@ -50,7 +50,7 @@ describe('Recipes', function() {
       ingredients: ['2 tbsp cocoa', '2 cups vanilla ice cream', '1 cup milk', 'a splash of magic']
     };
     return chai.request(app)
-      .get('/shopping-list')
+      .get('/recipes')
       .then(function(res) {
         updateData.id = res.body[1].id;
         return chai.request(app)
